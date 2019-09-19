@@ -1,10 +1,11 @@
 #calc-container {
     display: grid;
     width: 40vw;
-    min-width: 300px;
-    height: 90vh;
+    min-width: 500px;
+    height: 85vh;
+    min-height: 600px;
     margin: 3vh auto;
-    padding: 20px;
+    padding: 30px;
     grid-template-areas: "disp disp disp disp"
                          "clear clear div mult"
                          "seven eight nine sub"
@@ -13,8 +14,9 @@
                          "zero zero dec equals";
     grid-template-rows: repeat(6, 1fr);
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: 15px;
+    grid-gap: 25px;
     background-color: #4D4D4D;
+    border-radius: 35px;
 }
 
 .calc-button {
@@ -27,6 +29,7 @@
     height: 100%;
     font-family: 'Black Han Sans', sans-serif;
     font-size: 64px;
+    border-radius: 10px;
 }
 
 #display {
@@ -43,6 +46,7 @@
 
 #clear {
     grid-area: clear;
+    font-size: 48px;
 }
 
 #zero {
@@ -87,18 +91,24 @@
 
 #divide {
     grid-area: div;
+    background-color: #65C7D0;
+    font-size: 58px;
 }
 
 #multiply {
     grid-area: mult;
+    background-color: #65C7D0;
+    font-size: 58px;
 }
 
 #subtract {
     grid-area: sub;
+    background-color: #65C7D0;
 }
 
 #add {
     grid-area: add;
+    background-color: #65C7D0;
 }
 
 #decimal {
@@ -107,4 +117,5 @@
 
 #equals {
     grid-area: equals;
+    background-color: #E95D5E;
 }
