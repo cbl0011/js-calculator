@@ -2,8 +2,10 @@
     display: grid;
     width: 40vw;
     min-width: 500px;
+    max-width: 700px;
     height: 85vh;
     min-height: 600px;
+    max-height:900px;
     margin: 3vh auto;
     padding: 30px;
     grid-template-areas: "disp disp disp disp"
@@ -17,6 +19,7 @@
     grid-gap: 25px;
     background-color: #4D4D4D;
     border-radius: 35px;
+    box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.6);
 }
 
 .calc-button {
@@ -30,6 +33,19 @@
     font-family: 'Black Han Sans', sans-serif;
     font-size: 64px;
     border-radius: 10px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6);
+    transition-duration: 0.1s;
+    user-select: none;
+}
+
+.calc-button:active {
+    box-shadow: inset 6px 6px 6px rgba(0, 0, 0, 0.6), 0 0 1px rgba(0, 0, 0, 0);
+}
+
+.calc-button:active span {
+    position: relative;
+    top: 6px;
+    left: 6px;
 }
 
 #display {
