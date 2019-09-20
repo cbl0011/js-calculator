@@ -40,7 +40,6 @@ calcButtons.forEach((button) => {
             }
             isOperand(e.target.textContent);
         }
-        console.log(operations);
     })
 });
 
@@ -87,7 +86,7 @@ function isOperand(op) {
     if (op == '÷') op = '/';
     appendDisplay(' ' + op + ' ');
     decLock = false;
-    if (currentNum == '') {
+    if (currentNum == '' && operations.length > 0) {
         updateDisplay('ERROR');
     } else {
         operations.push(Number(currentNum));
@@ -137,9 +136,22 @@ function operate(operator, firstNum, secondNum) {
 function updateDisplay(text) {
     displayValue = text;
     calcDisplay.textContent = displayValue;
+    let dispArray = [...calcDisplay.textContent];
+    while(dispArray.indexOf(' ') >= 0) {
+        dispArray.splice(dispArray.indexOf(' '), 1);
+    }
+    if (dispArray.length >= 9) {
+        displayValue = '';
+        calcDisplay.textContent = 'OVERFLOW'; 
+    }
 }
 
 function appendDisplay(text) {
+    if (displayValue == 'ERROR') {
+        clear();
+        displayValue = '';
+        currentNum = '';
+    }
     updateDisplay(displayValue + text);
 }
 

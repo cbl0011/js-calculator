@@ -53,6 +53,7 @@
 }
 
 #display {
+    max-height: 100%;
     display: grid;
     align-content: center;
     justify-content: end;
@@ -62,6 +63,7 @@
     grid-area: disp;
     background-color: #D0E6A8;
     color: #4D4D4D;
+    text-overflow:ellipsis;
 }
 
 #clear {
