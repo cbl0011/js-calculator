@@ -42,6 +42,10 @@
     box-shadow: inset 6px 6px 6px rgba(0, 0, 0, 0.6), 0 0 1px rgba(0, 0, 0, 0);
 }
 
+.calc-button span {
+    pointer-events: none;
+}
+
 .calc-button:active span {
     position: relative;
     top: 6px;
